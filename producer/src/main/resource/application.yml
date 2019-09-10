@@ -1,6 +1,6 @@
 spring:
   application:
-    name: hello-dubbo-service-user-provider
+    name: provider
 
 user:
   service:
@@ -10,8 +10,8 @@ dubbo:
   scan:
     basePackages: com.ying.demo.api
   application:
-    id: hello-dubbo-service-user-provider
-    name: hello-dubbo-service-user-provider
+    id: provider
+    name: provider
     qos-port: 22222
     qos-enable: true
   protocol:
@@ -19,12 +19,12 @@ dubbo:
     name: dubbo
     port: 12346
     status: server
-    serialization: kryo #高速序列化
+    # serialization: kryo #高速序列化
     # optimizer:
 
   registry:
     id: zookeeper
-    address: zookeeper://192.168.1.12:2181?back=192.168.1.12:2182,192.168.1.12:2183
+    address: zookeeper://192.168.31.205:2181
   provider:
     loadbalance: roundrobin #负载均衡
 

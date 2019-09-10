@@ -10,8 +10,8 @@ dubbo:
   scan:
     basePackages: com.ying.demo.controller
   application:
-    id: hello-dubbo-service-user-consumer
-    name: hello-dubbo-service-user-consumer
+    id: consumer
+    name: consumer
     qos-port: 22223
     qos-enable: true
   protocol:
@@ -19,10 +19,10 @@ dubbo:
     name: dubbo
     port: 12345
     #status: server
-    serialization: kryo
+    # serialization: kryo
   registry:
     id: zookeeper
-    address: zookeeper://192.168.1.12:2181?back=192.168.1.12:2182,192.168.1.12:2183
+    address: zookeeper://192.168.31.205:2181
 
 
 management:
